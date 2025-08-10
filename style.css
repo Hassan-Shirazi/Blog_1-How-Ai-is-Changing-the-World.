@@ -1,0 +1,404 @@
+ /* --- General Setup & Theming --- */
+        :root {
+            --dark-bg: #010008;
+            --primary-glow: #00f2ea;
+            --secondary-glow: #8e2de2;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0c0;
+            --card-bg: rgba(10, 25, 47, 0.5);
+            --border-color: rgba(0, 242, 234, 0.2);
+            --danger-glow: #ff416c;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            background-image: linear-gradient(180deg, var(--dark-bg) 0%, #0c0c1e 100%);
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-primary);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* --- Global Styles --- */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            color: #fff;
+            text-shadow: 0 0 10px var(--primary-glow), 0 0 20px var(--primary-glow);
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--text-primary);
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-glow), var(--secondary-glow));
+            border-radius: 2px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%230a192f" fill-opacity="0.2"%3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z"/%3E%3Cpath d="M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1H6v-1H0V6h1V5h5z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+            background-size: 150px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        /* --- Hero Section --- */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            perspective: 1000px; /* For mouse parallax */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            transition: transform 0.1s ease-out; /* Smooth transition for parallax */
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            color: var(--primary-glow);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        /* --- Animated AI Brain/Network Visual --- */
+        .neural-network {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            opacity: 0.3;
+        }
+        .neural-node {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary-glow);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--primary-glow);
+        }
+
+        /* --- Section 1: AI Revolution --- */
+        .revolution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        .revolution-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .revolution-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px var(--border-color);
+        }
+        .revolution-item h3 {
+            color: var(--primary-glow);
+            margin-bottom: 15px;
+        }
+
+        /* --- Section 2: Monetize AI --- */
+        #monetize { background-color: rgba(0,0,0,0.2); }
+        .monetize-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        .monetize-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+        .monetize-card:hover {
+            background: rgba(10, 25, 47, 0.8);
+            box-shadow: 0 0 25px var(--secondary-glow);
+        }
+        .monetize-card .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--secondary-glow);
+            text-shadow: 0 0 15px var(--secondary-glow);
+        }
+        .monetize-card h3 {
+            color: var(--text-primary);
+            margin-bottom: 15px;
+        }
+        
+        /* --- Section 3: AI Growth Chart --- */
+        .chart-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 60px auto 0;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 400px;
+        }
+        .chart-bar {
+            width: 15%;
+            background: linear-gradient(0deg, var(--primary-glow), var(--secondary-glow));
+            position: relative;
+            border-radius: 5px 5px 0 0;
+            transform-origin: bottom;
+        }
+        .chart-bar .label {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+        .chart-bar .value {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-weight: 600;
+            opacity: 0;
+        }
+
+        /* --- NEW: AI Milestones Timeline --- */
+        #timeline { background-color: rgba(0,0,0,0.2); }
+        .timeline-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 60px auto 0;
+        }
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(180deg, var(--primary-glow), var(--secondary-glow));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--dark-bg);
+            border: 4px solid var(--primary-glow);
+            top: 25px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-left { left: 0; }
+        .timeline-right { left: 50%; }
+        .timeline-right::after { left: -10px; }
+        .timeline-content {
+            padding: 20px 30px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            position: relative;
+        }
+        .timeline-content h3 { font-size: 1.2rem; color: var(--primary-glow); }
+        .timeline-content p { font-size: 0.9rem; margin-bottom: 0; }
+
+        /* --- Section 4: Surpassing Humanity --- */
+        #singularity { background-color: rgba(0,0,0,0.2); }
+        .singularity-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 60px;
+            align-items: start;
+        }
+        .pros, .cons {
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            background: var(--card-bg);
+        }
+        .side-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            opacity: 0.8;
+        }
+        .pros .side-image { border: 2px solid var(--primary-glow); }
+        .cons .side-image { border: 2px solid var(--danger-glow); }
+
+        .pros h3 { color: var(--primary-glow); }
+        .cons h3 { color: var(--danger-glow); }
+        .singularity-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .singularity-content li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+        .singularity-content li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            font-weight: 900;
+        }
+        .pros li::before { color: var(--primary-glow); }
+        .cons li::before { content: '✗'; color: var(--danger-glow); }
+
+        /* --- Quote Section --- */
+        #quote {
+            text-align: center;
+        }
+        blockquote {
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            font-weight: 300;
+            font-style: italic;
+            color: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        blockquote footer {
+            font-size: 1rem;
+            margin-top: 20px;
+            color: var(--primary-glow);
+            font-style: normal;
+        }
+        .highlight {
+            background: linear-gradient(120deg, var(--primary-glow), var(--secondary-glow));
+            background-repeat: no-repeat;
+            background-size: 0% 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* --- Footer --- */
+        footer.main-footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            .container { padding: 60px 0; }
+            
+            .chart-container {
+                flex-direction: column;
+                height: auto;
+                align-items: flex-start; /* Align bars to the left */
+                gap: 50px;
+                padding: 40px 20px 60px 70px; /* Add left padding for labels */
+            }
+            .chart-bar {
+                width: 0%; /* Initially 0, animated by JS */
+                height: 40px;
+                border-radius: 0 5px 5px 0; /* Adjust radius for horizontal */
+                transform-origin: left;
+            }
+            .chart-bar .label {
+                left: -60px;
+                top: 50%;
+                transform: translateY(-50%);
+                text-align: right;
+                width: 50px;
+            }
+             .chart-bar .value {
+                left: calc(100% + 15px);
+                top: 50%;
+                transform: translateY(-50%);
+             }
+
+            .timeline-container::after { left: 20px; }
+            .timeline-item { width: 100%; padding-left: 60px; padding-right: 15px; }
+            .timeline-item::after { left: 10px; }
+            .timeline-right { left: 0; }
+            .timeline-right::after { left: 10px; }
+            
+            .singularity-content { grid-template-columns: 1fr; }
+        }
