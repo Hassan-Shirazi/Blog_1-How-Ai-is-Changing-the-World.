@@ -7,7 +7,7 @@ This project explores the impact of Artificial Intelligence on industries, daily
 
 ## 🌐 Live Demo
 
-🔗 [View Live Website](https://hassan-shirazi.github.io/Ai-Explain-Website/)  
+🔗 [View Live Website](https://hassan-shirazi.github.io/Blog_1-How-Ai-is-Changing-the-World./)  
 
 ---
 
